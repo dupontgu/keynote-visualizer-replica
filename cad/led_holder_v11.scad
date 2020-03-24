@@ -1,5 +1,7 @@
+include <constants.scad>
+
 LED_HOLE = 5.4;
-CYL_HEIGHT = 14;
+CYL_HEIGHT = stilt_height - 2;
 BASE_HEIGHT = 6;
 M3_HOLE = 3.5;
 M3_NUT_R = 3.4;

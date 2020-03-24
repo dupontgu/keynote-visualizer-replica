@@ -6,10 +6,13 @@ module top_assembly() {
         // the anchor coords tell where the stilt's platform originates from
         [60, 124, 10, 124],
         [60, 0, 20, 30],
-        [5, 155, 5, 100],
+        [6, 155, 6, 100],
     ];
 
     dxf_file = "keynote_dxf_clef_holes_single_screw_top.dxf";
+    center_hole_layer = "led_holes";
+    left_hole_layer = "screw_holes";
+    right_hole_layer = "right_screw_holes";
 
     include <keynote_chassis_base.scad>
 }

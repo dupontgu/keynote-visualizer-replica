@@ -2,6 +2,12 @@ use <keynote_dxf_clef_holes_single_screw_top.scad>
 use <keynote_dxf_clef_holes_single_screw_bottom.scad>
 use <keynote_dxf_clef_slits_top.scad>
 use <keynote_dxf_clef_slits_bottom.scad>
+use <keynote_dxf_keyhole_screw_left.scad>
+use <keynote_dxf_keyhole_slits_left.scad>
+use <keynote_dxf_keyhole_screw_center.scad>
+use <keynote_dxf_keyhole_slits_center.scad>
+use <keynote_dxf_keyhole_screw_right.scad>
+use <keynote_dxf_keyhole_slits_right.scad>
 use <led_holder_v11.scad>
 
 // relative placements are approximate! values are arbitrary!
@@ -27,5 +33,17 @@ color("red") translate([0, bottom_y_offset, slits_z_offset]) {
     bottom_slits();
 }
 
+translate([70, 50, 0]) {
+    color("cyan") left_assembly();
+    color ("magenta") translate([0, 0, slits_z_offset]) left_slits(); 
+    translate([110, 0, 0]) {
+        color("grey") center_assembly();
+        color ("black") translate([0, 0, slits_z_offset]) center_slits(); 
+    }
 
+    translate([215, 0, 0]) {
+        color("olive") right_assembly();
+        color ("lime") translate([0, 0, slits_z_offset]) right_slits(); 
+    }
+}
 
