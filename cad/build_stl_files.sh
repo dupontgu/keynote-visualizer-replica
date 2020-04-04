@@ -11,6 +11,7 @@ files=(
     "keynote_dxf_keyhole_slits_center"
     "led_holder_v11"
     "stilt_socket"
+    "pcb_holder"
 )
 
 for i in "${files[@]}"

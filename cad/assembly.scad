@@ -9,6 +9,7 @@ use <keynote_dxf_keyhole_slits_center.scad>
 use <keynote_dxf_keyhole_screw_right.scad>
 use <keynote_dxf_keyhole_slits_right.scad>
 use <led_holder_v11.scad>
+use <pcb_holder.scad>
 
 // relative placements are approximate! values are arbitrary!
 // TODO mock LED
@@ -45,5 +46,9 @@ translate([70, 50, 0]) {
         color("olive") right_assembly();
         color ("lime") translate([0, 0, slits_z_offset]) right_slits(); 
     }
+}
+
+translate([150, -70, 0]) {
+    color("purple") pcb_holder();
 }
 
